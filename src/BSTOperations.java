@@ -93,42 +93,4 @@ public class BSTOperations {
 
         return head;
     }
-
-    /**
-     * @param head BST head node
-     *             Prints BST in level order
-     */
-    public void levelOrderWithLevel2(BSTNode head) {
-        if (head == null) {
-            return;
-        }
-        int i = 1;
-        Queue<BSTNode> queue = new LinkedList<>();
-        queue.add(head);
-        do {
-            int queueSize = queue.size();
-            System.out.println();
-            System.out.printf("Seviye %d: \t", i);
-            for (int j = 0; j < queueSize; j++) {
-                BSTNode temp = queue.poll();
-                if (temp == null) {
-                    System.out.print("boş,");
-                    continue;
-                } else {
-                    System.out.printf("%d,", temp.data);
-                }
-                if (temp.right != null) {
-                    queue.add(temp.right);
-                } else {
-                    queue.add(null);
-                }
-                if (temp.left != null) {
-                    queue.add(temp.left);
-                } else {
-                    queue.add(null);
-                }
-            }
-            i++;
-        } while (!queue.isEmpty());
-    }
 }

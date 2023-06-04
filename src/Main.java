@@ -9,13 +9,9 @@ public class Main {
         }
         bstOperations.levelOrderWithLevel(head);
         System.out.println();
-        System.out.println("----");
-        head = bstOperations.createMirror(head);
-        System.out.println("----");
-        bstOperations.levelOrderWithLevel(head);
-        System.out.println("----");
+        System.out.println();
+
         head = bstOperations.createMirror2(head);
-        System.out.println("----");
-        bstOperations.levelOrderWithLevel2(head);
+        bstOperations.levelOrderWithLevel(head);
     }
 }
